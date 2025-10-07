@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arun's Profile Card</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #683ba3c0, #3b7588, #843095);
+      background-image: url(kkk.jpg);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 380px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(50px);
+      animation: fadeIn 1.2s ease-out;
+      color: #000000;
+    }
+    .photo-top-right {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 125px;
+      height: 150px;
+      border-radius: 13%;
+      object-fit: cover;
+      border: 2px solid #00f5ff;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      animation: pulse 4s infinite ease-in-out;
+    }
+    .card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #00f5ff, #ff00c8);
+      background-clip: text;
+    }
+    .card p {
+      margin: 0.5rem 0;
+      line-height: 1.5;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(183, 164, 164, 0.284);
+      padding: 0.4rem 0.7rem;
+      margin: 0.2rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #000000;
+      transition: background 0.3s ease;
+    }
+    .tag:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 10px;
+    }
+.buttons a {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(to right, #00f7ff77, #ff00c859);
+  color: white;
+  padding: 0.6rem 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.5);
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+      50% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.4); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="200.gif" alt="Arun's Photo" class="photo-top-right" />
+    <h1>Arun Misra</h1>
+    <p><strong>Location:</strong> SST, Bengalore, India</p>
+    <p><strong>Title:</strong> Student & Developer</p>
+    <p><strong>Skills:</strong></p>
+    <div>
+      <span class="tag">HTML/CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Python</span>
+      <span class="tag">JAVA</span>
+      <span class="tag">C++</span>
+    </div>
+    <p><strong>Current Focus:</strong> Improving Myself at the rate of 1% per day</p>
+    <div class="buttons">
+      <a href="mailto:arun@example.com">Contact</a>
+      <a href="#">Portfolio</a>
+    </div>
+  </div>
+</body>
+</html>
